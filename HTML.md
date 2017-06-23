@@ -84,18 +84,18 @@ Good:
 ```
 
 ### 尽量使用语义化的标签
-`<header>`  定义 section 或 page 的页眉。
-`<footer>`  定义 section 或 page 的页脚。
-`<main>`    规定文档的主要内容。
-`<section>` 定义文档中的区段。
-`<article>` 定义文章。
-`<aside>`   定义页面内容之外的内容。
-`<details>` 定义元素的细节。
-`<summary>` 为 `<details>` 元素定义可见的标题。
-`<nav>` 定义导航链接。
-`<progress>`    定义任何类型的任务的进度。
-`<time>`    定义日期/时间。
-`<wbr>` 定义可能的换行符（Word Break Opportunity）。
+* `<header>`  定义 section 或 page 的页眉。
+* `<footer>`  定义 section 或 page 的页脚。
+* `<main>`    规定文档的主要内容。
+* `<section>` 定义文档中的区段。
+* `<article>` 定义文章。
+* `<aside>`   定义页面内容之外的内容。
+* `<details>` 定义元素的细节。
+* `<summary>` 为 `<details>` 元素定义可见的标题。
+* `<nav>` 定义导航链接。
+* `<progress>`    定义任何类型的任务的进度。
+* `<time>`    定义日期/时间。
+* `<wbr>` 定义可能的换行符（Word Break Opportunity）。
 
 `div` 和 `span` 是两个典型的没有任何语义的标签，只有在没有对应的语义的标签的时候再使用。
 
@@ -104,18 +104,18 @@ Good:
 
 ### 不使用HTML 5废弃的标签
 以下标签已经在HTML 5中标记为废弃，请不要使用。
-`<acronym>` ：请使用`<abbr>`。
-`<applet>`：请使用`<embed>` 或 `<object>`。
-`<basefont>`：请使用样式表。
-`<big>`：请使用样式表。
-`<center>`：请使用样式表。
-`<dir>`：请使用`<ul>`。
-`<font>`：请使用样式。
-`<frame>`：HTML 5不支持。
-`<frameset>`：HTML 5不支持。
-`<noframes>`：HTML 5不支持。
-`<strike>`：请使用`<del>` 或 `<s>`。
-`<tt>`：请使用样式。
+* `<acronym>` ：请使用`<abbr>`。
+* `<applet>`：请使用`<embed>` 或 `<object>`。
+* `<basefont>`：请使用样式表。
+* `<big>`：请使用样式表。
+* `<center>`：请使用样式表。
+* `<dir>`：请使用`<ul>`。
+* `<font>`：请使用样式。
+* `<frame>`：HTML 5不支持。
+* `<frameset>`：HTML 5不支持。
+* `<noframes>`：HTML 5不支持。
+* `<strike>`：请使用`<del>` 或 `<s>`。
+* `<tt>`：请使用样式。
 
 ### 使用小写属性名
 Bad:
