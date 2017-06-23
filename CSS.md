@@ -3,8 +3,8 @@
 ## CSS部分
 
 ### 命名
-参见HTML中id和class的[命名规范](HTML%20Code%20Style.md#%E5%91%BD%E5%90%8D)。
-命名应当尽可能短，并且意义明确。单词全部使用小写，多个单词之间以连字符连接。不以表现来命名，而是根据内容语义来命名。比如：left, right, center, red, black这种以表现来定命名，不允许出现；
+参见HTML中id和class的[命名规范](HTML%20Code%20Style.md#%E5%91%BD%E5%90%8D)。  
+命名应当尽可能短，并且意义明确。单词全部使用小写，多个单词之间以连字符连接。不以表现来命名，而是根据内容语义来命名。比如：left, right, center, red, black这种以表现来定命名，不允许出现。
 
 Bad:
 ```css
@@ -31,7 +31,7 @@ Good:
 ```
 
 ### 类型选择器
-若无必要，不要在id和class前增加类型选择器限定。
+若无必要，不要在id和class前增加类型选择器限定。  
 Bad:
 ```css
 ul#example {}
@@ -43,7 +43,7 @@ Good:
 .error {}
 ```
 ### 后代选择器
-选择器的嵌套层级最多不超过**三层**。
+选择器的嵌套层级最多不超过**三层**。  
 Bad:
 ```css
 .page-container #stream .stream-item .info .info-header .username {}
@@ -53,7 +53,7 @@ Good:
 .info-header .username {}
 ```
 ### 选择器分组
-使用选择器分组时每个选择器单独占用一行。
+使用选择器分组时每个选择器单独占用一行。  
 Bad:
 ```css
 a:focus, a:active {
@@ -95,7 +95,7 @@ body > .wrapper {
 * &gt;、+、~ 选择器的两边各保留一个空格
 * 属性选择器中的值用双引号包围
 
-规则集之间使用一个换行分隔。
+规则集之间使用一个换行分隔。  
 Good:
 ```css
 html {
@@ -109,7 +109,7 @@ body {
 ```
 
 ### 缩写属性
-尽量使用缩写属性。
+尽量使用缩写属性。  
 Bad:
 ```css
 border-top-width: 1px;
@@ -129,7 +129,7 @@ border-top: 1px solid #000;
 font: 100%/1.6 palatino, georgia, serif;
 padding: 0 1em 2em;
 ```
-但是也不要滥用缩写属性，当只需要设置单个值的时候不要使用缩写属性。
+但是也不要滥用缩写属性，当只需要设置单个值的时候不要使用缩写属性。  
 Bad:
 ```css
 .element {
@@ -149,7 +149,7 @@ Good:
 ```
 
 ### 值和单位
-当值为0时省略单位和%。
+当值为0时省略单位和%。  
 Bad:
 ```css
 width: 0%;
@@ -162,7 +162,7 @@ width: 0;
 margin: 0;
 font-size: 0;
 ```
-当值为-1至1之间的小数时省略前导的0。
+当值为-1至1之间的小数时省略前导的0。  
 Bad:
 ```css
 font-size: 0.8em;
@@ -174,7 +174,7 @@ font-size: .8em;
 line-height: .5;
 ```
 ### 颜色
-尽量使用16进制颜色值，英文字符采用小写。并且尽可能短。
+尽量使用16进制颜色值，英文字符采用小写。并且尽可能短。  
 Bad:
 ```css
 color: #eebbcc;
@@ -251,7 +251,7 @@ font-family 按「英文字体在前、中文字体在后」、「效果佳 (质
 * transform: rotate(ndeg);
 * opacity: 0..1;
 
-典型的，可以使用 translate 来代替 left 作为动画属性。
+典型的，可以使用 translate 来代替 left 作为动画属性。  
 示例：
 
 Bad:
@@ -276,7 +276,7 @@ Good:
 ```
 
 ### Hacks
-不使用浏览器探测（CSS Hacks）。
+不使用浏览器探测（CSS Hacks）。  
 可以针对低版本ie浏览器使用条件判断，将样式放在独立的文件中。
 ```html
 <!--[if IE 6]>
@@ -315,6 +315,6 @@ transform: rotate(90deg);
 使用 [Normalize](http://necolas.github.io/normalize.css/) 代替 [CSS Reset](http://meyerweb.com/eric/tools/css/reset/)
 
 ### 多组合少继承
-多使用组合方式定义样式（参考Bootstrap）。比如先定义.btn样式基础，.btn-success定义绿色按钮，.btn-lg定义大尺寸按钮。
-组合三个类 `<button class="btn btn-success btn-lg"></button>` 定义绿色大尺寸的按钮，
-`<button class="btn btn-danger btn-sm"></button>` 定义红色小尺寸按钮。
+多使用组合方式定义样式（参考Bootstrap）。比如先定义.btn样式基础，.btn-success定义绿色按钮，.btn-lg定义大尺寸按钮。  
+组合三个类 `<button class="btn btn-success btn-lg"></button>` 定义绿色大尺寸的按钮，  
+另外三个类`<button class="btn btn-danger btn-sm"></button>` 定义红色小尺寸按钮。
