@@ -36,6 +36,10 @@ meta标签描述有关页面的信息，放在页面的head部分，可以使搜
 <meta name="description" content="the description about this page">
 <meta name="date" content="2017-06-22T03:25:00+00:00">
 ```
+IE 支持通过特定的 `<meta>` 标签来确定绘制当前页面所应该采用的 IE 版本。除非有强烈的特殊需求，否则最好是设置为 edge mode，从而通知 IE 采用其所支持的最新的模式。
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+```
 
 ### HTML 注释
 
@@ -96,7 +100,7 @@ Good:
 `div` 和 `span` 是两个典型的没有任何语义的标签，只有在没有对应的语义的标签的时候再使用。
 
 ### 自闭合标签
-自闭合标签可以不关闭标签。例如`<br/>`、`<hr/>`、`<input/>`、`<img/>` ，可以写成`<br>`、`<hr>`、`<input>`、`<img>`。
+自闭合标签（self-closing）可以不关闭标签。例如`<br/>`、`<hr/>`、`<input/>`、`<img/>` ，可以写成`<br>`、`<hr>`、`<input>`、`<img>`。
 
 ### 不使用HTML 5废弃的标签
 以下标签已经在HTML 5中标记为废弃，请不要使用。
@@ -183,6 +187,9 @@ Good:
 
 ### 有确定值的属性
 boolean类型的属性可以不写属性值。例如 `disabled="disabled"`、`readonly="readonly"`、`checked="checked"`、`selected="selected"`，可以写成`disabled`，`readonly`，`checked`，`selected`。
+
+> 元素的布尔型属性如果有值，就是 true，如果没有值，就是 false。
+
 其他类似属性还有：`autofocus`，`async`，`controls`，`autoplay`，`muted`，`loop`，`download`，`hidden`，`novalidate`，`required`。
 下列属性当值为真值时也可以省略属性值。
 `contenteditable="true"`
@@ -191,17 +198,53 @@ boolean类型的属性可以不写属性值。例如 `disabled="disabled"`、`re
 `spellcheck="true"`
 
 ### 命名
-id、class命名要足够表达含义，不要随意自创缩写（但是可以使用大家广泛采用的缩写），单词全部使用小写，多个单词之间以连字符连接。（参考Bootstrap命名方式）
+id、class命名应当尽可能短，并且意义明确（不要随意自创缩写）。单词全部使用小写，多个单词之间以连字符连接。（参考Bootstrap命名方式）
 Good：btn、nav、msg、info、desc、menu、header、footer、sidebar、detail、logo、btn-small、btn-large
 Bad：d、a1、b2、m10、mn、inf、des、btnA、hd、ft、btn1、delt、lg、btn-s、btn-l
-使用语义而不是表现去命名。
-Good：btn-success、btn-danger、btn-large、btn-small
+不以表现来命名，而是根据内容语义来命名。比如：left, right, center, red, black这种以表现来命名，不允许出现；
 Bad：btn-green、btn-red、btn-w100 (代表width:100px)、btn-w50 (代表width:50px)
+Good：btn-success、btn-danger、btn-large、btn-small
+
+### 嵌套
+请注意正确的嵌套顺序。行内元素中尽量不嵌套块级元素。
+Bad:
+```html
+<span>
+    <div>nested div</div>
+</span>
+<a href="#">
+    <div>nested div</div>
+</a>
+```
+另外注意以下元素中也不能嵌套块级元素，只能嵌套行内元素。
+标题标记的 `<h1>` ~ `<h6>` 、`<caption>` ，段落标记的 `<p>`。
+
+`<h1>` ~ `<h6>` 、`<a>` 、 `<button>` 不能嵌套两层相同元素。同时 `<a>` 和 `<button>` 也不建议互相嵌套。
+Bad:
+```html
+<a href="#">
+    <a href="#">nested a</a>
+</a>
+<button>
+    <button>nested button</button>
+</button>
+<h3>
+    <h2>nested heading</h2>
+</h3>
+<a href="#">
+    <button>nested button</button>
+</a>
+<button>
+    <a href="#">nested a</a>
+</button>
+```
 
 ### 结构、表现、行为分离
 使用外部样式和脚本，样式放在css文件里，脚本放在js文件里。
 尽量不使用内联样式(`style="width:100px"`)和内部样式(`<style>div{width:100px;}</style>`)。
 尽量不使用内联脚本(`onclick="onClick()"`)和内部脚本(`<script>alert('hello world');</script>`)。
+
+在引入 CSS 和 JavaScript 文件时一般不需要指定 `type` 属性，因为 `text/css` 和 `text/javascript` 分别是它们的默认值。
 
 ### 样式表位置
 
