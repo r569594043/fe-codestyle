@@ -49,7 +49,7 @@ Bad:
 .page-container #stream .stream-item .info .info-header .username {}
 ```
 Good:
-```
+```css
 .info-header .username {}
 ```
 ### 选择器分组
