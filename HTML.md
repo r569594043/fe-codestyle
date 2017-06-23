@@ -206,7 +206,7 @@ Bad：btn-green、btn-red、btn-w100 (代表width:100px)、btn-w50 (代表width:
 Good：btn-success、btn-danger、btn-large、btn-small
 
 ### 嵌套
-请注意正确的嵌套顺序。行内元素中尽量不嵌套块级元素。
+请注意正确的嵌套顺序。行内元素中尽量不嵌套块级元素。  
 Bad:
 ```html
 <span>
@@ -219,7 +219,7 @@ Bad:
 另外注意以下元素中也不能嵌套块级元素，只能嵌套行内元素。  
 标题标记的 `<h1>` ~ `<h6>` 、`<caption>` ，段落标记的 `<p>`。
 
-`<h1>` ~ `<h6>` 、`<a>` 、 `<button>` 不能嵌套两层相同元素。同时 `<a>` 和 `<button>` 也不建议互相嵌套。
+`<h1>` ~ `<h6>` 、`<a>` 、 `<button>` 不能嵌套两层相同元素。同时 `<a>` 和 `<button>` 也不建议互相嵌套。  
 Bad:
 ```html
 <a href="#">
