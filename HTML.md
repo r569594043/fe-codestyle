@@ -91,7 +91,7 @@ Good:
 `<article>` 定义文章。
 `<aside>`   定义页面内容之外的内容。
 `<details>` 定义元素的细节。
-`<summary>` 为 <details> 元素定义可见的标题。
+`<summary>` 为 `<details>` 元素定义可见的标题。
 `<nav>` 定义导航链接。
 `<progress>`    定义任何类型的任务的进度。
 `<time>`    定义日期/时间。
