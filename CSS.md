@@ -57,7 +57,7 @@ Good:
 Bad:
 ```css
 a:focus, a:active {
-  position: relative; top: 1px;
+    position: relative; top: 1px;
 }
 ```
 Good:
@@ -65,8 +65,8 @@ Good:
 h1,
 h2,
 h3 {
-  font-weight: normal;
-  line-height: 1.2;
+    font-weight: normal;
+    line-height: 1.2;
 }
 ```
 
@@ -99,12 +99,12 @@ body > .wrapper {
 Good:
 ```css
 html {
-  background: #fff;
+    background: #fff;
 }
 
 body {
-  margin: auto;
-  width: 50%;
+    margin: auto;
+    width: 50%;
 }
 ```
 
@@ -112,22 +112,26 @@ body {
 尽量使用缩写属性。  
 Bad:
 ```css
-border-top-width: 1px;
-border-top-style: solid;
-border-top-color: #000;
-font-family: palatino, georgia, serif;
-font-size: 100%;
-line-height: 1.6;
-padding-bottom: 2em;
-padding-left: 1em;
-padding-right: 1em;
-padding-top: 0;
+.element {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+    font-family: palatino, georgia, serif;
+    font-size: 100%;
+    line-height: 1.6;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0;
+}
 ```
 Good:
 ```css
-border-top: 1px solid #000;
-font: 100%/1.6 palatino, georgia, serif;
-padding: 0 1em 2em;
+.element {
+    border-top: 1px solid #000;
+    font: 100%/1.6 palatino, georgia, serif;
+    padding: 0 1em 2em;
+}
 ```
 但是也不要滥用缩写属性，当只需要设置单个值的时候不要使用缩写属性。  
 Bad:
@@ -140,7 +144,7 @@ Bad:
 ```
 
 Good:
-```
+```css
 .element {
     margin-bottom: 10px;
     background-color: red;
@@ -152,38 +156,50 @@ Good:
 当值为0时省略单位和%。  
 Bad:
 ```css
-width: 0%;
-margin: 0px;
-font-size: 0em;
+.element {
+    width: 0%;
+    margin: 0px;
+    font-size: 0em;
+}
 ```
 Good:
 ```css
-width: 0;
-margin: 0;
-font-size: 0;
+.element {
+    width: 0;
+    margin: 0;
+    font-size: 0;
+}
 ```
 当值为-1至1之间的小数时省略前导的0。  
 Bad:
 ```css
-font-size: 0.8em;
-line-height: 0.5;
+.element {
+    font-size: 0.8em;
+    line-height: 0.5;
+}
 ```
 Good:
 ```css
-font-size: .8em;
-line-height: .5;
+.element {
+    font-size: .8em;
+    line-height: .5;
+}
 ```
 ### 颜色
 尽量使用16进制颜色值，英文字符采用小写。并且尽可能短。  
 Bad:
 ```css
-color: #eebbcc;
-background: #03E4D5;
+.element {
+    color: #eebbcc;
+    background: #03E4D5;
+}
 ```
 Good:
 ```css
-color: #ebc;
-background: #03e4d5;
+.element {
+    color: #ebc;
+    background: #03e4d5;
+}
 ```
 ### 字体
 字体族尽量使用英文名，如果有空格需要放在双引号中。常见中文字体对应英文名如下：
@@ -280,10 +296,10 @@ Good:
 可以针对低版本ie浏览器使用条件判断，将样式放在独立的文件中。
 ```html
 <!--[if IE 6]>
-<link rel="stylesheet" type="text/css" href="css/ie6.css" />
+    <link rel="stylesheet" type="text/css" href="css/ie6.css" />
 <![endif]-->
 <!--[if IE 7]>
-<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+    <link rel="stylesheet" type="text/css" href="css/ie7.css" />
 <![endif]-->
 ```
 
@@ -300,15 +316,17 @@ Good:
 ### 厂商前缀
 按如下顺序使用厂商前缀：
 ```css
-background: -webkit-linear-gradient(red, yellow);
-background: -moz-linear-gradient(red, yellow);
-background: -o-linear-gradient(red, yellow);
-background: linear-gradient(red, yellow);
--webkit-transform: rotate(90deg);
--moz-transform: rotate(90deg);
--ms-transform: rotate(90deg);
--o-transform: rotate(90deg);
-transform: rotate(90deg);
+.element {
+    background: -webkit-linear-gradient(red, yellow);
+    background: -moz-linear-gradient(red, yellow);
+    background: -o-linear-gradient(red, yellow);
+    background: linear-gradient(red, yellow);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 ```
 
 ### CSS Reset
