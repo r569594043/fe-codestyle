@@ -188,51 +188,51 @@ background: #03e4d5;
 ### 字体
 字体族尽量使用英文名，如果有空格需要放在双引号中。常见中文字体对应英文名如下：
 <table>
-<thead>
-<tr><th>字体</th><th>操作系统</th><th>Family Name</th></tr>
-</thead>
-<tbody>
-<tr>
-<td>宋体 (中易宋体)</td>
-<td>Windows</td>
-<td>SimSun</td>
-</tr>
-<tr>
-<td>黑体 (中易黑体)</td>
-<td>Windows</td>
-<td>SimHei</td>
-</tr>
-<tr>
-<td>微软雅黑</td>
-<td>Windows</td>
-<td>Microsoft YaHei</td>
-</tr>
-<tr>
-<td>微软正黑</td>
-<td>Windows</td>
-<td>Microsoft JhengHei</td>
-</tr>
-<tr>
-<td>华文黑体</td>
-<td>Mac/iOS</td>
-<td>STHeiti</td>
-</tr>
-<tr>
-<td>冬青黑体</td>
-<td>Mac/iOS</td>
-<td>Hiragino Sans GB</td>
-</tr>
-<tr>
-<td>文泉驿正黑</td>
-<td>Linux</td>
-<td>WenQuanYi Zen Hei</td>
-</tr>
-<tr>
-<td>文泉驿微米黑</td>
-<td>Linux</td>
-<td>WenQuanYi Micro Hei</td>
-</tr>
-</tbody>
+    <thead>
+        <tr><th>字体</th><th>操作系统</th><th>Family Name</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>宋体 (中易宋体)</td>
+            <td>Windows</td>
+            <td>SimSun</td>
+        </tr>
+        <tr>
+            <td>黑体 (中易黑体)</td>
+            <td>Windows</td>
+            <td>SimHei</td>
+        </tr>
+        <tr>
+            <td>微软雅黑</td>
+            <td>Windows</td>
+            <td>Microsoft YaHei</td>
+        </tr>
+        <tr>
+            <td>微软正黑</td>
+            <td>Windows</td>
+            <td>Microsoft JhengHei</td>
+        </tr>
+        <tr>
+            <td>华文黑体</td>
+            <td>Mac/iOS</td>
+            <td>STHeiti</td>
+        </tr>
+        <tr>
+            <td>冬青黑体</td>
+            <td>Mac/iOS</td>
+            <td>Hiragino Sans GB</td>
+        </tr>
+        <tr>
+            <td>文泉驿正黑</td>
+            <td>Linux</td>
+            <td>WenQuanYi Zen Hei</td>
+        </tr>
+        <tr>
+            <td>文泉驿微米黑</td>
+            <td>Linux</td>
+            <td>WenQuanYi Micro Hei</td>
+        </tr>
+    </tbody>
 </table>
 
 使用方式如下：
