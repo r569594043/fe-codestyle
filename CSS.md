@@ -3,7 +3,7 @@
 ## CSS部分
 
 ### 命名
-参见HTML中id和class的[命名规范](HTML%20Code%20Style.md#%E5%91%BD%E5%90%8D)。  
+参见HTML中id和class的[命名规范](HTML.md#%E5%91%BD%E5%90%8D)。  
 命名应当尽可能短，并且意义明确。单词全部使用小写，多个单词之间以连字符连接。不以表现来命名，而是根据内容语义来命名。比如：left, right, center, red, black这种以表现来定命名，不允许出现。
 
 Bad:
