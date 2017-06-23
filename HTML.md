@@ -11,8 +11,8 @@
 
 ### 空行和缩进
 
-不要毫无理由地增加空行。
-为了提高可读性，可以增加空行来分隔大型或逻辑代码块。
+不要毫无理由地增加空行。  
+为了提高可读性，可以增加空行来分隔大型或逻辑代码块。  
 使用四个空格的缩进。请勿使用 TAB。
 
 ### 元数据
@@ -97,7 +97,7 @@ Good:
 * `<time>`    定义日期/时间。
 * `<wbr>` 定义可能的换行符（Word Break Opportunity）。
 
-`div` 和 `span` 是两个典型的没有任何语义的标签，只有在没有对应的语义的标签的时候再使用。
+`div` 和 `span` 是两个典型的没有任何语义的标签，只有在**没有对应语义的标签**时再使用。
 
 ### 自闭合标签
 自闭合标签（self-closing）可以不关闭标签。例如`<br/>`、`<hr/>`、`<input/>`、`<img/>` ，可以写成`<br>`、`<hr>`、`<input>`、`<img>`。
@@ -159,7 +159,7 @@ Good:
 ```html
 <img src="html5.gif" alt="HTML5" style="width:128px;height:128px">
 ```
-`<a>`标签的title属性可作为说明信息，并且当鼠标hover时显示为提示信息。
+`<a>` 标签的title属性可作为说明信息，并且当鼠标hover时显示为提示信息。
 
 Good:
 ```html
@@ -181,8 +181,8 @@ Good:
 ```
 
 ### 合理使用id和类
-同一个页面同一个id的元素只能有一个，不同的页面可以有多个。
-同一个页面同一个类的元素可以有多个。
+同一个页面同一个id的元素**只能有一个**，不同的页面可以有多个。  
+同一个页面同一个类的元素可以有多个。  
 通常用类来定义样式，用id来为JavaScript提供快速选择的途径。
 
 ### 有确定值的属性
@@ -190,19 +190,19 @@ boolean类型的属性可以不写属性值。例如 `disabled="disabled"`、`re
 
 > 元素的布尔型属性如果有值，就是 true，如果没有值，就是 false。
 
-其他类似属性还有：`autofocus`，`async`，`controls`，`autoplay`，`muted`，`loop`，`download`，`hidden`，`novalidate`，`required`。
-下列属性当值为真值时也可以省略属性值。
-`contenteditable="true"`
-`autocomplete="on"`
-`preload="auto"`
-`spellcheck="true"`
+其他类似属性还有：`autofocus`，`async`，`controls`，`autoplay`，`muted`，`loop`，`download`，`hidden`，`novalidate`，`required`。  
+下列属性当值为真值时也可以省略属性值。  
+* `contenteditable="true"`
+* `autocomplete="on"`
+* `preload="auto"`
+* `spellcheck="true"`
 
 ### 命名
-id、class命名应当尽可能短，并且意义明确（不要随意自创缩写）。单词全部使用小写，多个单词之间以连字符连接。（参考Bootstrap命名方式）
-Good：btn、nav、msg、info、desc、menu、header、footer、sidebar、detail、logo、btn-small、btn-large
-Bad：d、a1、b2、m10、mn、inf、des、btnA、hd、ft、btn1、delt、lg、btn-s、btn-l
-不以表现来命名，而是根据内容语义来命名。比如：left, right, center, red, black这种以表现来命名，不允许出现；
-Bad：btn-green、btn-red、btn-w100 (代表width:100px)、btn-w50 (代表width:50px)
+id、class命名应当尽可能短，并且意义明确（不要随意自创缩写）。单词全部使用小写，多个单词之间以连字符连接。（参考Bootstrap命名方式）  
+Good：btn、nav、msg、info、desc、menu、header、footer、sidebar、detail、logo、btn-small、btn-large  
+Bad：d、a1、b2、m10、mn、inf、des、btnA、hd、ft、btn1、delt、lg、btn-s、btn-l  
+不以表现来命名，而是根据内容语义来命名。比如：left, right, center, red, black这种以表现来命名，不允许出现；  
+Bad：btn-green、btn-red、btn-w100 (代表width:100px)、btn-w50 (代表width:50px)  
 Good：btn-success、btn-danger、btn-large、btn-small
 
 ### 嵌套
@@ -216,7 +216,7 @@ Bad:
     <div>nested div</div>
 </a>
 ```
-另外注意以下元素中也不能嵌套块级元素，只能嵌套行内元素。
+另外注意以下元素中也不能嵌套块级元素，只能嵌套行内元素。  
 标题标记的 `<h1>` ~ `<h6>` 、`<caption>` ，段落标记的 `<p>`。
 
 `<h1>` ~ `<h6>` 、`<a>` 、 `<button>` 不能嵌套两层相同元素。同时 `<a>` 和 `<button>` 也不建议互相嵌套。
@@ -240,8 +240,8 @@ Bad:
 ```
 
 ### 结构、表现、行为分离
-使用外部样式和脚本，样式放在css文件里，脚本放在js文件里。
-尽量不使用内联样式(`style="width:100px"`)和内部样式(`<style>div{width:100px;}</style>`)。
+使用外部样式和脚本，样式放在css文件里，脚本放在js文件里。  
+尽量不使用内联样式(`style="width:100px"`)和内部样式(`<style>div{width:100px;}</style>`)。  
 尽量不使用内联脚本(`onclick="onClick()"`)和内部脚本(`<script>alert('hello world');</script>`)。
 
 在引入 CSS 和 JavaScript 文件时一般不需要指定 `type` 属性，因为 `text/css` 和 `text/javascript` 分别是它们的默认值。
@@ -282,10 +282,12 @@ Bad:
 
 尽量使用小写文件名，不要使用中文文件名，多个单词之间以连字符-分隔。
 如：
+```
 index.html
 my-page.html
 jquery-1.12.4.js
 icon-search.png
+```
 
 ### 文件扩展名
 
