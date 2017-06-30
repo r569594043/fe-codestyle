@@ -190,7 +190,7 @@ boolean类型的属性可以不写属性值。例如 `disabled="disabled"`、`re
 
 > 元素的布尔型属性如果有值，就是 true，如果没有值，就是 false。
 
-其他类似属性还有：`autofocus`，`async`，`controls`，`autoplay`，`muted`，`loop`，`download`，`hidden`，`novalidate`，`required`。  
+其他类似属性还有：`autofocus`，`async`，`controls`，`autoplay`，`muted`，`loop`，`download`，`hidden`，`novalidate`，`required`，`multiple`。  
 下列属性当值为真值时也可以省略属性值。  
 * `contenteditable="true"`
 * `autocomplete="on"`
